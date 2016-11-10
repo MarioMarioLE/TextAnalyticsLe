@@ -1,6 +1,7 @@
 package de.unidue.langtech.teaching.pp.example;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
@@ -26,11 +27,43 @@ public class BaselineExample
     {
         System.out.println("Document is: " + jcas.getDocumentText());
         
-        Collection<Token> tokens = JCasUtil.select(jcas, Token.class);
+        Collection<Token> tokens = JCasUtil.select(jcas, Token.class); 
         System.out.println("CAS contains " + tokens.size() + " tokens.");
         
         DetectedLanguage languageAnno = new DetectedLanguage(jcas);
-        languageAnno.setLanguage("EN");
-        languageAnno.addToIndexes();
+        
+ //       String[] KeywordEN={"I","the","she"};
+        
+//        for(Token t:tokens){
+//        	System.out.println(t.getCoveredText());
+//        	if(t.getCoveredText().equals("the"));
+//        	languageAnno.setLanguage("EN");
+//        	  languageAnno.addToIndexes();
+//        }
+        
+        for(Token t:tokens){
+        	System.out.println(t.getCoveredText());
+        	if(t.getCoveredText().equals("te"));
+        	languageAnno.setLanguage("FR");
+        	  languageAnno.addToIndexes();
+        }
+        
+//        for(Token t:tokens){
+//        	System.out.println(t.getCoveredText());
+//        	if(t.getCoveredText().equals("ist"));
+//        	languageAnno.setLanguage("DE");
+//        	  languageAnno.addToIndexes();
+//        }
+        
+ 
+        
+        
+        
+        	//DetectedLanguage languageAnno = new DetectedLanguage(jcas);
+  
+        
+        
+        //languageAnno.setLanguage("EN");
+        //languageAnno.addToIndexes();
     }
 }
