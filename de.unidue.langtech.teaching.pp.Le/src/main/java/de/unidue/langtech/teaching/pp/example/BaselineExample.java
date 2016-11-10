@@ -40,20 +40,7 @@ public class BaselineExample
 //        	languageAnno.setLanguage("EN");
 //        	  languageAnno.addToIndexes();
 //        }
-        
-        for(Token t:tokens){
-        	System.out.println(t.getCoveredText());
-        	if(t.getCoveredText().equals("te"));
-        	languageAnno.setLanguage("FR");
-        	  languageAnno.addToIndexes();
-        }
-        
-//        for(Token t:tokens){
-//        	System.out.println(t.getCoveredText());
-//        	if(t.getCoveredText().equals("ist"));
-//        	languageAnno.setLanguage("DE");
-//        	  languageAnno.addToIndexes();
-//        }
+       
         
  
         
